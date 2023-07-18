@@ -1,0 +1,65 @@
+Elabore um algoritmo que representa um cadastro.
+Ele deve ler os seguintes dados fornecidos pelo usuário:
+
+- Nome
+- Endereço
+- Cidade
+- CPF
+- RG
+- Idade
+- Nome do pai
+- Nome da mãe
+- Peso
+- Renda bruta
+
+Apresente as informações solicitadas no final do cadastro.
+
+Resposta: 
+
+var
+   nome, endereco, cidade, cpf, rg, idade, nomePai, nomeMae, peso, rendaBruta: caractere
+
+inicio
+   escreva("Digite seu nome: ");
+   leia(nome);
+
+   escreva("Digite seu endereço: ");
+   leia(endereco);
+   
+   escreva("Digite sua cidade: ");
+   leia(cidade);
+
+   escreva("Digite seu cpf: ");
+   leia(cpf);
+
+   escreva("Digite seu rg: ");
+   leia(rg);
+
+   escreva("Digite sua idade: ");
+   leia(idade);
+
+   escreva("Digite o nome do seu pai: ");
+   leia(nomePai);
+
+   escreva("Digite o nome da sua mãe: ");
+   leia(nomeMae);
+
+   escreva("Digite o seu peso: ");
+   leia(peso);
+
+   escreva("Digite sua renda bruta: ");
+   leia(rendaBruta);
+
+   escreva("Informações solicitadas:\n");
+   escreva("Nome: ", nome, "\n");
+   escreva("Endereco: ", endereco, "\n");
+   escreva("Cidade: ", cidade, "\n");
+   escreva("CPF: ", cpf, "\n");
+   escreva("RG: ", rg, "\n");
+   escreva("Idade: ", idade, "\n");
+   escreva("Nome do Pai: ", nomePai, "\n");
+   escreva("Nome da Mãe: ", nomeMae, "\n");
+   escreva("Peso: ", peso, "\n");
+   escreva("Renda Bruta: ", rendaBruta, "\n");
+   
+fimalgoritmo

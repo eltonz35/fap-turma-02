@@ -1,0 +1,40 @@
+Levando em consideração os aprendizados sobre as estruturas condicionais,
+elabore um algoritmo que possa descobrir, através de perguntas e respostas,
+qual é o meio de transporte que o usuário está considerando. O usuário deverá escolher uma das seguintes opções:
+
+- trator; 
+- moto; 
+- bicicleta. 
+
+Para chegar ao resultado, as perguntas precisam ser respondidas apenas com "Sim" ou "Não".
+
+Exemplo:
+É terrestre? Sim.
+Cabe apenas uma pessoa? Sim.
+É pesado? Não.
+Tem pedal? Sim.
+Então, o transporte escolhido foi a bicicleta.
+
+Para chegar ao resultado de cada uma das opções, use o modelo em anexo.
+
+Resposta: 
+
+const prompt = require("prompt-sync")();
+
+console.log("Escolha um transporte a partir das opções apenas com sim ou nao: ")
+
+var terrestre = prompt("É terrestre? ");
+var capacete = prompt("Usa capacete? ");
+var espaco = prompt("Cabe apenas uma pessoa? ");
+var peso = prompt("É pesado? ");
+var pedal = prompt("Tem pedal? ");
+
+if(terrestre == "sim" && espaco == "sim" && peso == "sim") {
+  console.log("Então, o transporte escolhido foi o trator! ");
+} else if(terrestre == "sim" && capacete == "sim") {
+  console.log("Então, o transporte escolhido foi a moto! ");
+} else {
+  console.log("Entao, o transporte escolhido foi a bicicleta! ");
+}
+
+OBS: Código executa no replit.

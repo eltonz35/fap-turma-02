@@ -1,0 +1,14 @@
+Faça um código, utilizando o Google Blockly, que execute a contagem regressiva de uma bomba,
+informando o número de segundos para explodir. Ele deverá mostrar a mensagem
+“iniciando contagem regressiva”,
+os segundos passados e, no final, a mensagem “BUM!”.
+
+Resposta:
+
+console.log("iniciando contagem regressiva")
+for (let i = 0; i <= 5 ; i++) {
+    console.log(i)
+    if(i == 5) {
+        console.log("BUM!")
+    }
+}  

@@ -1,0 +1,73 @@
+Faça, utilizando o Google Blockly, uma função calculadora que os números e as operações serão feitas pelo usuário.
+O código deve ficar rodando infinitamente até que o usuário escolha a opção de sair. No início,
+o programa mostrará a seguinte lista de operações:
+1: Soma
+2: Subtração
+3: Multiplicação
+4: Divisão
+0: Sair
+
+Digite o número para a operação correspondente e caso o usuário introduza qualquer outro,
+o sistema deve mostrar a mensagem “Essa opção não existe” e voltar ao menu de opções.
+
+Após a seleção, o sistema deve pedir para o usuário inserir o primeiro e segundo valor, um de cada.
+Depois precisa executar a operação e mostrar o resultado na tela. Quando o usuário escolher a opção “Sair”, o sistema irá parar. 
+
+É necessário que o sistema mostre as opções sempre que finalizar uma operação e mostrar o resultado. 
+
+Resposta: 
+
+const readline = require("readline");
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+console.log("Escolha entre as operações a seguir: ");
+console.log("1: Soma");
+console.log("2: Subtração");
+console.log("3: Multiplicação");
+console.log("4: Divisão");
+console.log("0: Sair");
+
+function operacoes(operacao , valor1, valor2) {
+    switch(operacao) {
+        case "1": 
+            return valor1 + valor2;
+        case "2":
+            return valor1 - valor2;
+        case "3":
+            return valor1 * valor2;
+        case "4":
+            return valor1 / valor2;
+        default:
+            console.log("Essa opção não existe");
+    }
+}
+
+function iniciarCalculadora() {
+  
+    rl.question('Opção: ', (operacao) => {
+      if (operacao === '0') {
+        console.log('Saindo da calculadora.');
+        rl.close();
+      } else if (operacao >= '1' && operacao <= '4') {
+        rl.question('Digite o primeiro valor: ', (num1) => {
+          rl.question('Digite o segundo valor: ', (num2) => {
+            const resultado = operacoes(operacao, parseFloat(num1), parseFloat(num2));
+            if (!isNaN(resultado)) {
+              console.log(`Resultado: ${resultado}`);
+            }
+            iniciarCalculadora();
+          });
+        });
+      } else {
+        console.log('Essa opção não existe.');
+        iniciarCalculadora();
+      }
+    });
+  }
+  
+  console.log('Calculadora simples');
+  iniciarCalculadora();
